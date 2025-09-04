@@ -1,0 +1,23 @@
+Faça um programa que solicite um valor entre 1 e 10. Esse valor deve ser válido. 
+O programa deve apresentar a tabuada de multiplicação do número informado, conforme modelo apresentado no quadro da sala.
+<br>
+O programa DEVE usar estrutura de programação. <br>
+
+O programa DEVE ser na linguagem JavaScript e o arquivo a ser enviado DEVE ser no formato HTML. 
+<br><hr>
+<script>
+    var multiplicador = 0
+    var multiResultado = 0
+    var numero = Number(prompt("Escolha um número de 1 a 10 para a tabuada. <br>"))
+    if  (numero >= 0 || numero < 11) {
+        if (numero < 0 || numero >= 11) {
+            document.write("Numero errado. Aperte f5 e tente novamente")
+        } else {
+            while (multiplicador <= 10) {
+                multiResultado = (multiplicador * numero) 
+                document.write(multiplicador + " X " + numero + " = " + multiResultado + "<br>")
+                multiplicador = multiplicador + 1
+            }        
+        }
+    }
+</script>

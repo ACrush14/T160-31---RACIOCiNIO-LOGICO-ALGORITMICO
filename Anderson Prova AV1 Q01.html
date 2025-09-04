@@ -1,0 +1,19 @@
+Sabe-se que o quilowatt de energia custa 1/20 do salário mínimo. Faça um programa
+que solicite o valor do salário mínimo e a quantidade de quilowatts consumida por uma residência.
+Calcule e mostre:<br>
+a) O valor de cada quilowatt<br>
+b) O valor a ser pago por essa residência (valor de cada quilowatt vezes quantidade de
+quilowatts consumidos)<br>
+c) O valor a ser pago com um desconto de 20%.
+<hr><br>
+<script>
+    var salmin = Number(prompt("Informe seu salário mínimo"))
+    var ener = Number(prompt("Informe quantos quilowatts foi consumida na residência"))
+    var qwatt = (salmin/20)
+    var pago = (qwatt*ener)
+    var desc = ((pago - ((pago*20)/100)))
+
+    document.write("O valor do quilowatt é " + qwatt + ".<br>")
+    document.write("O valor a ser pago por essa residência é " + pago + ".<br>")
+    document.write("Parabéns! Com um desconto de 20% você vai pagar apenas " + desc + ".<br>")
+</script>

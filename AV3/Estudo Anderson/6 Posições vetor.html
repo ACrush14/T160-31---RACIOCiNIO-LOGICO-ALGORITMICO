@@ -1,0 +1,19 @@
+Faça um programa que crie um vetor de 5 posições, armazene informações em
+cada posição do vetor, e apresente o vetor preenchido.
+
+<br><hr>
+<script>
+    var V = new Array (5);
+    var x;
+
+    for (x = 0; x < 5; x++){
+        V[x] = prompt("Informe o dado da posição " + x + " do vetor V")
+    }
+    
+    document.write(" Vetor informado: "+V+"<br><br>");
+
+    //para apresentar o vetor, precisa de um for -_-
+    for (x = 0; x < 5; x++){
+        document.write("V["+x+"] = " + V[x] + "<br>")
+    }
+</script>

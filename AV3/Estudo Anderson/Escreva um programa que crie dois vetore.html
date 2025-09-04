@@ -1,0 +1,28 @@
+Escreva um programa que crie dois vetores de tamanho desconhecido. 
+Um vetor deverá ser preenchido apenas com valores pares e o outro vetor apenas com valores ímpares. 
+O programa deve solicitar ao usuário que ele informe 20 números inteiros. 
+A cada novo número informado, o programa deverá alocar o valor no vetor adequado. 
+Ao final, o programa deve apresentar os dois vetores construídos a partir dos números informados.
+
+<hr><br>
+
+<script>
+    //dois vetores
+    var par = []
+    var impar = []
+
+    //loop para pedir os 20 numeros inteiros
+    for (var contador = 0; contador < 20; contador++){
+        var numero = Number(prompt("Informe o numero da posição " + contador ))
+
+        if (numero %2 == 0) {
+            par.push(numero)
+        } else if (numero %2 != 0) {
+            impar.push(numero)
+        } else {
+        }
+    }
+
+    document.write("Numeros pares: " + par +"<br><br>")
+    document.write("Numeros impares: " + impar +"<br><br>")
+</script>

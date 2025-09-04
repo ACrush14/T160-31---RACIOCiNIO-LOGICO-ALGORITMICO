@@ -1,0 +1,29 @@
+Escreva um programa que receba ou gere um vetor desordenado, aplique o método bolha
+e ordene o vetor, apresentando-o em seguida
+
+<br><hr>
+<script>
+var a = []
+var b = 0
+
+for (b = 0; b < 30; b++) {
+    a[b] = parseInt(Math.random()*101)
+}
+
+document.write("Vetores gerados: " +a +"<br><br>")
+
+//agora para os valores ordenados, criar duas variaveis
+//uma para a contagem de mover o valor, e outra para auxiliar no movimento
+var c, aux
+for (c = a.length-1; c > 0; c--) {
+    for (b = 0; b < c; b++) {
+        if (a[b] > a[b+1]) {
+            aux = a[b];
+            a[b] = a[b+1];
+            a[b+1] = aux;
+        }
+    }
+}
+
+document.write("Vetor ordenados: " +a)
+</script>

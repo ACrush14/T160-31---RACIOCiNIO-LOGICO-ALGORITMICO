@@ -1,0 +1,49 @@
+Faça um programa que receba a hora do início de um jogo e a hora do término 
+(cada hora é composta por duas variáveis inteiras: hora e minuto). 
+Calcule e mostre a duração do jogo (horas e minutos), 
+sabendo que o tempo máximo de duração do jogo é de 24 horas e que ele pode começar em um dia e 
+terminar no dia seguinte. 
+<hr><br>
+
+<script>
+    var horas1 = Number(prompt("Digite a hora do começo do jogo. Entre 0 ~ 23")); //20
+    var min1 = Number(prompt("Digite o minuto do começo do jogo. Entre 0 ~ 59")); //50
+    var horas2 = Number(prompt("Digite a hora do final do jogo. Entre 0 ~ 23")); //23
+    var min2 = Number(prompt("Digite o minuto do final do jogo. Entre 0 ~ 59")); //10
+    var horaf, minf, dseguinte = 0;
+
+    if (min1 < 0 || min1 > 59 || min2 < 0 || min2 > 59) {
+        document.write("Coloque um minuto apropriado");
+    } else if (horas1 < 0 || horas1 > 23 || horas2 < 0 || horas2 > 23) {
+        document.write("Coloque uma hora apropriada");
+    } else {
+        minf = min2 - min1; 
+        if (minf < 0) {
+            minf += 60;
+            horas2 -= 1;
+        } 
+        document.write("minuto final é " +minf + " e a horas2 é " + horas2 + ". <br>") 
+        horaf = horas2 - horas1; 
+        if (horaf < 0) {
+            horaf = horaf + 24;
+            dseguinte += 1;
+        } else {dseguinte = 0}
+        
+        document.write("O evento começou as " + horas1 + " horas e " + min1 + " minutos. Ele acabou aos "+ horas2 + " horas e " + min2 +" minutos. <br>")
+        if (dseguinte == 1) {
+            document.write("O tempo de evento durou " + horaf + " horas e " + minf + " minutos acabando no dia seguinte.")
+        } else {
+            document.write("O tempo de evento durou "  + horaf + " horas e " + minf + " minutos.")
+        }
+        
+    }
+
+
+// 20:50 ~~ 6:10
+//O evento durou 9 horas e 20 minutos, e acabou no dia seguinte.
+
+
+//ao somar min1 e min2, quero subtrair 60 deles, e adicionar 1 na hora
+//ao somar horas1 e horas2, quero subtrair 24 e adicionar 1 no dia seguinte.
+
+</script>

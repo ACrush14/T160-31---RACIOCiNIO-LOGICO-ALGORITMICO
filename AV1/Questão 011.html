@@ -1,0 +1,19 @@
+Faça um programa que receba um número positivo e maior que zero, calcule e mostre:
+a) o número digitado ao quadrado;
+b) o número digitado ao cubo;
+c) a raiz quadrada do número digitado;
+d) a raiz cúbica do número digitado.
+<hr><br>
+
+<script>
+    var n1 = Number(prompt("Me dê um número"))
+    var n1x2 = (n1**2)
+    var n1x3 = (n1**3)
+    var n1rt2 = Math.sqrt(n1)
+    var n1rt3 = Math.cbrt(n1)
+
+    document.write("o quadrado do número é " + n1x2.toFixed(2) + "<br>")
+    document.write("o cubo do número é " + n1x3.toFixed(2) + "<br>")
+    document.write("a raiz quadrada do número é " + n1rt2.toFixed(2) + "<br>")
+    document.write("a raiz cubica do número é " + n1rt3.toFixed(2) + "<br>")
+</script>

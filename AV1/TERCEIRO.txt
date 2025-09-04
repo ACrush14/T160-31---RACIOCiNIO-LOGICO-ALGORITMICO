@@ -1,0 +1,31 @@
+<h6> Primeiro programa </h6>
+
+Apresenta como declarar variáveis e apresentação de dados e/ou texto <br><hr>
+<script>
+//Declaração de variáveis - criação da variável
+var A;
+var B, C, D;
+//var A = 30
+
+//Armazenamento de dados nas variáveis
+A = 30;
+B = "Raciocínio";
+C = "100";
+D = B;
+
+//Instruções de saída apresentando apenas dados
+alert(A);
+document.write(B);
+console.log(C);
+document.write("<br>");
+
+//Instruções de saída apresentando apenas texto
+alert('Apresentando o comando alert');
+document.write("Apresentando o comando document.write <br>");
+console.log("Apresentando o comando console.log");
+
+//Instruções de saída apresentando texto e dados
+alert("Conteúdo da variável A = " + A);
+document.write("Conteúdo da variável B = " + B);
+console.log("Conteúdo da variável C = " + C + " e da variável D = " + D);
+</script>

@@ -1,0 +1,24 @@
+Uma determinada obra apresenta um cartaz informando que está há uma quantidade de
+dias sem sofrer acidentes. Faça um programa que transforme essa informação em 
+quantidade de anos, de meses e de dias sem sofrer acidentes.
+<br><hr>
+<script>
+//Declaração de Variáveis
+var tempo, ano, mes, dia;
+
+//Solicitação de informações
+tempo = Number(prompt("Informe a quantidade de dias sem acidentes"));
+
+
+//Processamento de dados
+ano = Math.trunc(tempo / 360);
+tempo = tempo % 360;
+mes = Math.floor(tempo/30);
+dia = tempo % 30;
+
+//Apresentação dos resultados
+document.write("Tempo sem acidentes: " + ano+ " ano(s), "+ mes + "mes(es) e " + dia + " dias");
+
+
+
+</script>

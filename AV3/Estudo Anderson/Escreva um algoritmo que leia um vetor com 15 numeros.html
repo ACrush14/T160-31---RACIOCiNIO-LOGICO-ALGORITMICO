@@ -1,0 +1,45 @@
+Faça um programa que preencha um vetor com 15 números aleatórios de 0 a 50 e verifique a existência de elementos multiplos de 3,
+     mostrando as posições que aparecem
+    tambem mostre: <br>
+        
+O maior número  <br>
+O menor número  <br>
+A soma de todos os números  <br>
+A média de todos números  <br>
+<hr><br>
+<script>
+    var vetor15 = []
+    var maiorNumero = -1    //verificar o maior número
+    var menorNumero = 99    //verificar menor numero
+    var soma = 0 //somatorio dos numeros
+    var media = 0 //media de todos os numeros
+
+    for (var contador = 0; contador < 15; contador++){
+        vetor15[contador] = parseInt(Math.random()*51)
+
+        if (maiorNumero < vetor15[contador]) { //substituição do maior numero
+            maiorNumero = vetor15[contador]
+        }
+
+        if (menorNumero > vetor15[contador]) { //substituição do menor numero
+            menorNumero = vetor15[contador]
+        }
+
+        soma += vetor15[contador]
+
+
+    }
+    media = parseFloat(soma/15).toFixed(2)
+
+    document.write("15 vetores lidos:" + vetor15 + "<br><br>")
+    document.write("maior vetor:" + maiorNumero + "<br><br>")
+    document.write("menor vetor:" + menorNumero + "<br><br>")
+    document.write("soma dos vetores:" + soma + "<br><br>")
+    document.write("media dos vetores:" + media + "<br><br>")
+
+
+
+
+    
+
+</script>

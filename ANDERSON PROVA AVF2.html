@@ -1,0 +1,45 @@
+<center><h3>AVF2 ANDERSON</h3></center>
+
+Faça um programa para ler o sexo (M — masculino; F — feminino) e o número de 
+horas-aula dadas mensalmente por 15 professores de uma universidade, 
+sabendo-se que cada hora-aula vale R$ 30,00. O programa deve mostrar a 
+média dos salários líquidos dos professores do sexo masculino e a média dos 
+salários líquidos dos professores do sexo feminino. Considere que o salário bruto 
+será a quantidade de horas-aula dadas multiplicada pelo valor da hora-aula. 
+O salário líquido é calculado como sendo o salário bruto e um 
+desconto de 10% para homens e de 5% para mulheres sobre o salário bruto.
+<br><hr>
+<script>
+var masc = 0
+var fem = 0
+var prof = 0
+while (prof < 15) {
+    prof++
+    var sexo = prompt("Seu sexo é masculino ou feminino? digite m ou f")
+    if (sexo == "m") {
+        masc++
+    } else if (sexo == "f") {
+        fem++
+    } else {
+    } document.write("Não digitou certo. aperte f5 e tente novamente. <br>")
+    break
+}
+
+var horaProf = Number(prompt("E a quantidade de hora aulas feita mensalmente por professores?"))
+
+horaAula = 30
+mascSalBruto = horaProf * masc * horaAula
+femSalBruto = horaProf * fem * horaAula
+
+document.write("Salario masculino bruto: R$" +  mascSalBruto.toFixed(2) +" <br>")
+document.write("Salario feminino bruto: R$" +  femSalBruto.toFixed(2) +" <br>")
+
+mascSalLiq = mascSalBruto * 0.9
+femSalLiq = femSalBruto * 0.95
+
+document.write("Salario masculino liquido: R$" +  mascSalLiq.toFixed(2) +" <br>")
+document.write("Salario feminino liquido: R$" +  femSalLiq.toFixed(2) +" <br>")
+</script>
+
+
+

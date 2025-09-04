@@ -1,0 +1,26 @@
+Escreva um algoritmo que leia um vetor de 10 posições e mostre-o ordenado em
+ordem crescente.
+<hr><br>
+<script>
+    vetor10 = []
+    vetorOrdenado = []
+
+    for (var contador1 = 0; contador1 < 10; contador1++) {
+        vetor10[contador1] = parseInt(Math.random()*50)+1
+    }
+
+    document.write("Vetor desordenado: " +vetor10 + "<br><br>")
+
+    var aux
+    for (var x = 0; x < 10; x++) {
+        for (var contador2 = 0; contador2 <10; contador2++) {
+            if (vetor10[contador2] > vetor10[contador2+1]) {
+                aux = vetor10 [contador2+1]
+                vetor10[contador2+1] = vetor10[contador2]
+                vetor[contador2] = aux
+            }
+        }
+    }
+
+        document.write("Vetor ordenado: " +vetor10 + "<br><br>")
+</script>

@@ -1,0 +1,31 @@
+Escreva um programa que receba ou gere um vetor desordenado, 
+aplique o método bolha e ordene o vetor, apresentando-o em seguida.
+
+<hr><br>
+<script>
+    var vetor = [];
+
+
+    for (var x = 0; x < 15; x++){
+        var numero = parseInt(Math.random()*51)
+        vetor[x] = numero
+    }
+
+    document.write("Vetor desordenado: " + vetor+ "<br><br>")
+
+    //vetor ordenado via metodo bubblespot
+    for (var c = vetor.length-1; c >= 0; c--){
+        for(var x = 0; x < 15; x++){
+            if(vetor[x] > vetor[x+1]) {
+                var aux
+                aux = vetor[x + 1]
+                vetor [x+1] = vetor [x]
+                vetor [x] = aux
+            }
+        }
+
+    }
+
+document.write("Vetor ordenado: " + vetor+ "<br><br>")
+
+</script>

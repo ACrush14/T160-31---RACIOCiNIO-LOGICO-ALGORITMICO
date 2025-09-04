@@ -1,0 +1,23 @@
+Cícero, Prático e Heitor construíram 3 casas, uma para cada. Cada casa é capaz de
+suportar rajadas de vento de até certa velocidade. Escreva um programa que leia (em km/h) as
+velocidades máximas das rajadas de vento que cada casa é capaz de suportar e:<br>
+a) Informe a maior velocidade suportada.<br>
+b) Informe o nome do dono da casa que suporta a rajada de vento mais violenta 
+<hr><br>
+
+
+<script>
+    var ci = Number(prompt("Assumindo que todos são valores diferentes, em Km/h, qual a velocidade máxima de rajada de vento que a casa de Cícero aguenta?"))
+    var pra = Number(prompt("Agora, em Km/h, qual a velocidade máxima de rajada de vento que a casa de Prátigo aguenta?"))
+    var he = Number(prompt("E por último, de novo, em Km/h, qual a velocidade máxima de rajada de vento que a casa de Heitor aguenta?"))
+
+
+    if (ci > pra && ci > he) {
+        document.write("A casa de Cícero aguenta mais. Ela aguenta " + ci + " Km/h.")
+    } else if (pra > ci && pra > he) {
+        document.write("A casa de Prático aguenta mais. Ela aguenta " + pra + " Km/h.")
+    } else if (he > ci && he > pra) {
+        document.write("A casa de Heitor aguenta mais. Ela aguenta " + he + " Km/h.")
+    }
+
+</script>

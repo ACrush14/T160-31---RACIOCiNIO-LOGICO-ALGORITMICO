@@ -1,0 +1,39 @@
+Elaborar um algoritmo que lê um conjunto de 30 valores e os coloca em 2 vetores conforme os valores
+forem pares ou impares. O tamanho do vetor é de 5 posições
+se algum vetor estiver cheio, mostre-o na tela e esvazie-o. Terminada a leitura escrever
+o conteúdo dos dois vetores. Cada vetor pode ser preenchido tantas vezes quantas
+forem necessárias.
+<hr><br>
+<script>
+    //criar três vetores
+    vetor30 = []
+    vetorPar = []
+    vetorImpar = []
+
+    //adicionar o número no vetorA e no vetorB via ParseInt Math.Random
+    for (var contador = 0; contador < 30; contador++) {
+        vetor30[contador] = parseInt(Math.random()*10)+1
+        //if no vetor 30 for par, vai pro vetor par e da um push
+        //if no vetor 30 for impar, vai pro vetor impar e da um push
+        if (vetor30[contador] %2 == 0) {
+            vetorPar.push(vetor30[contador])
+            if (vetorPar[contador] > 5) { //se o vetor par tiver mais que 5 elementos
+                document.write(vetorPar[contador])
+                document.write("Vetor par:" + vetorPar + ". Esvaziando vetor.<br>") //printa o valor com os 5 elementos
+                vetorPar[0,0,0,0,0] //esvazia o vetor par.
+            }
+        } else if (vetor30 [contador] %2 != 0) {
+            vetorImpar.push(vetor30[contador])
+        } else {
+        }
+        
+    }
+
+    //ao receber 5 numeros no vetor, esvaziar o vetor. Com o que? igualando a zero?
+
+
+    document.write("Vetor 30:" + vetor30 + "<br><br>")
+    document.write("Vetor par:" + vetorPar + "<br><br>")
+    document.write("Vetor impar:" + vetorImpar + "<br><br>")
+
+</script>

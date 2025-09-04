@@ -1,0 +1,26 @@
+Escrever um programa que receba um vetor ordenado, e pergunte ao usuário qual valor 
+ele deseja encontrar no vetor. O programa deve informar se encontrou o valor e dizer a posição, ou se não encontrou o valor.
+<br><hr>
+<script>
+var A = [2,7,13,18,27,31,38,43,49,55,63,71,78,85];
+document.write("Vetor informado: " + A + "<br>");
+var X = Number(prompt("Informe o valor a ser buscado no vetor:"));
+var inicio = 0, fim = A.length - 1;
+while (inicio <= fim){
+	var meio = parseInt((inicio + fim)/2);
+	if (X > A[meio]){
+		inicio = meio + 1;
+	}
+	if (X < A[meio]){
+		fim = meio - 1;
+	}
+	if (X == A[meio]){
+		break;
+	}
+}
+if (X == A[meio]){
+	document.write("Valor " + X + " encontra-se na posição " + meio );
+} else {
+	document.write("Valor "+X+" não está dentro do vetor informado.");
+}
+</script>

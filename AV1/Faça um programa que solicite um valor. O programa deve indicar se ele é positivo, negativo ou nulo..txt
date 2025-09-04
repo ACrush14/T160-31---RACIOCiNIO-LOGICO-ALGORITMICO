@@ -1,0 +1,4 @@
+Faça um programa que solicite um valor. O programa deve indicar se ele é positivo, negativo ou nulo.
+<br><hr>
+//entrada de dados
+

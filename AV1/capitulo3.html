@@ -1,0 +1,67 @@
+<script>
+
+var pulaLinha = function() { 
+    document.write("<br>");
+};
+var mostra = function(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+var calculaIMC = function(altura, peso) {
+    var imc = peso / (altura**2);
+    return imc //pra que exatamente eu quero isso?
+}
+
+var peso = 75;
+var altura = 1.72;
+var imc = peso / (altura * altura);
+document.write ("meu IMC é: " + imc.toFixed(2) + ".<br>") //usar document.write ao inves de mostra
+var pesoDoPrimo = 83;
+var alturaDoPrimo = 1.76;
+var imcDoPrimo = calculaIMC(alturaDoPrimo, pesoDoPrimo);
+document.write("O imc do meu primo é " + imcDoPrimo.toFixed(2) + ".<br>");
+document.write(" Ele ainda está " + (imcDoPrimo.toFixed(2) - 18.5)
++ " pontos acima do limite de magreza." + ".<br>");
+
+
+//Fazer prompt de recebimento de informação
+var nome = prompt("Olá! Qual é o seu nome?");
+document.write("Bem vindo, " + nome + ".<br>");
+
+var idade = prompt(nome + ", quantos anos você tem?");
+document.write(nome + " tem " + idade + " anos.");
+
+var alturaDoUsuario = prompt("Qual é a sual altura? escreva em cm ex: 1.80");
+var pesoDoUsuario = prompt("E o seu peso em kg?");
+var imcDoUsuario = calculaIMC(alturaDoUsuario, pesoDoUsuario);
+    mostra(" O seu imc é " + imcDoUsuario.toFixed(2) + ".<br>");
+
+//descubra quantos dias seus amigos já viveram - dificuldade de escrever funções
+var dias = idade * 365
+document.write("Você já viveu " + dias + " dias de vida" + ".<br>")
+
+//batimentos cardiacos
+var batimentos = dias * 24 * 60 * 80
+var batimentos
+document.write("Seu coração já bateu " + batimentos + " vezes. Bate mais,")
+
+//teste de função
+var primeira = function() {
+console.log("1 - antes");
+segunda();
+console.log("1 - depois");
+};
+var segunda = function() {
+console.log("2 - antes");
+terceira();
+console.log("2 - depois");
+};
+var terceira = function() {
+console.log("3");
+};
+primeira();
+</script>
+
+
+</script>

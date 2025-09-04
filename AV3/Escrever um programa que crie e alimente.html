@@ -1,0 +1,26 @@
+Escrever um programa que crie e alimente um vetor de 8 posições. O vetor deve
+ser apresentado. Em seguida, o programa deve investigar e informar quais são 
+o maior valor e o menor valor, e suas respectivas posições dentro do vetor.
+<br><hr>
+<script>
+var A = new Array(8);
+var p;
+for (p = 0; p < 8; p++){
+	A[p] = Number(prompt("Informe o valor da posição " + p));
+}
+document.write("Vetor lido: " + A + "<br>");
+var maior = A[0], menor = A[0];
+var pma = 0, pme = 0;
+for (p = 0; p < 8; p++){
+	if (maior < A[p]){
+		maior = A[p];
+		pma = p;
+	}
+	if (menor > A[p]){
+		menor = A[p];
+		pme = p;
+	}
+}
+document.write("O maior valor do vetor é " +maior+" na posição "+pma+"<br>");
+document.write("O menor valor do vetor é "+menor+" na posição " + pme);
+</script>

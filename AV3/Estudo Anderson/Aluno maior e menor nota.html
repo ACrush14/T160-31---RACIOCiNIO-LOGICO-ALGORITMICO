@@ -1,0 +1,28 @@
+Um professor irá preencher um vetor com o nome dos alunos e outro com as notas dos alunos, informando a quantidade de alunos
+    depois o programa ira apresentar:  <br>
+        
+apenas os nomes dos alunos com a nota maior que ou igual 7 com suas respectivas notas  <br>
+o nome do aluno com a maior nota com sua respectiva nota  <br>
+o nome do aluno com a menor nota e sua respectiva nota  <br>
+
+<hr><br>
+<script>
+    var alunos = []
+    var notas = []
+    var alunoMaiorNota 
+    var maiorNota = 0
+    var alunoMenorNota 
+    var menorNota = 999999
+
+    var tamanho = Number(prompt("Me diga quantos alunos tem: "))
+
+    for (var contador = 0; contador < tamanho; contador++) {
+        alunos[contador] = prompt("Me diga o nome do infeliz")
+        notas[contador] = Number(prompt("Me diga a nota do infeliz"))
+
+        if (notas[contador] > 7) {
+            document.write("O aluno " +alunos[contador] + " até parece gente, tirou mais que 7. ele tirou "+ notas[contador]+ "<br>")
+        }
+    }
+
+</script>

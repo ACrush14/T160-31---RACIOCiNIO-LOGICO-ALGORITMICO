@@ -1,0 +1,19 @@
+Joguinho matematica aleatório?
+<br><hr>
+<script>
+    var numero = Math.round(Math.random() * 10)
+    var nTentativa = 1
+    while(nTentativa <= 999) {
+        var chute = prompt("Já pensei em um número. Qual você acha que é?")
+        if (chute == numero) {
+        document.write("Uau, tu é o bixão mesmo né? O número foi " + numero)
+        break
+    } if (chute > numero) {
+        alert("O número é menor.")
+    } else {
+        alert("O número é maior.")
+    }
+    nTentativa++
+}
+
+</script>

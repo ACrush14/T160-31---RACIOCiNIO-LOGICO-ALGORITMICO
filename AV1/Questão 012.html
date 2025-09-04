@@ -1,0 +1,16 @@
+Faça um programa que receba dois números maiores que zero, calcule e mostre um elevado ao outro.
+<hr><br>
+
+<script>
+    var n1 = Number(prompt("Me dê um número"))
+    var n2 = Number(prompt("Me dê outro número"))
+    var n1e2 = (n1**n2)
+    var n2e1 = (n2**n1)
+
+    if (n1 > 0 && n2 > 0) {
+        document.write("O primeiro número elevado ao segundo número é " + n1e2.toFixed(2) + "<br>")
+        document.write("O segundo número elevado ao primeiro número é " + n2e1.toFixed(2) + "<br>")
+    } else {
+        document.write("coloque números acima de 0. Aperte f5 para tentar novamente.")
+    }
+</script>

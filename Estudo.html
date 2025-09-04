@@ -1,0 +1,36 @@
+Faça um programa que o professor digite a nota de 10 alunos e mostre: <br>
+    1- A média de todas as notas; <br>
+    2- A maior nota; <br>
+    3- A menor nota; <br>
+    se a média das notas for menor que 7, mostre que o desempenho da sala está abaixo da média <br>
+    se for de 7 para cima mostre que a turma está acima da média <br>
+    USE ARRAY
+    <script>
+        let numeroDeAlunos  = Number(prompt("Digite o número de alunos: "))
+        let vetor = []
+        let somatorio = 0
+        let maiorNota = 0
+        let menorNota = 9999999
+
+        for(let i = 0; i<numeroDeAlunos; i++) {
+            let nota = Number(prompt("Digite a nota: "))
+            vetor.push(nota)
+            somatorio += nota
+            if(nota > maiorNota) {
+                maiorNota = nota
+            }
+            if(nota < menorNota) {
+                menorNota = nota
+            }
+        }
+        let media = somatorio / vetor.length
+        console.log("A média das notas é: " + media)
+        console.log("A maior nota é : " + maiorNota)
+        console.log("A menor nota é : " + menorNota)
+        if(media < 7) {
+            console.log("O desempenho da sala está abaixo da média.")
+        } else {
+            console.log("A turma está acima da média.")
+        }
+
+    </script>

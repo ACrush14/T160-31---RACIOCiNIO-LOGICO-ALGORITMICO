@@ -1,0 +1,27 @@
+escreva um algoritmo que leia, e mostre um vetor de 20 elementos inteiros. 
+a seguir, conte quantos pares existem no vetor.
+
+<script>
+    //criar um vetor
+    var vetorA = []
+    var vetorPar = []
+    var contPar = 0
+
+    //fazer o contador para inserir o numero nos vetores
+    for (contador = 0; contador < 20; contador++) {
+        //fazer o algoritmo de injeção de número por posição via parseInt Math.random
+        vetorA[contador] = parseInt(Math.random()*10)
+        if (vetorA[contador] %2 == 0) {
+            vetorPar.push(vetorA[contador])
+            contPar++
+            
+        } else {
+            continue
+        }
+    }
+    document.write("todos os vetores:" + vetorA + "<br><br>")
+    document.write("vetores pares:" + vetorPar + "<br><br>")
+    document.write("quantidade de pares:" + contPar + "<br><br>")
+
+
+</script>

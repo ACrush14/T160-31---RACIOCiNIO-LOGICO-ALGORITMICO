@@ -1,0 +1,41 @@
+Faça um programa que receba a hora do início de um jogo e a hora do término 
+(cada hora é composta por duas variáveis inteiras: hora e minuto). 
+Calcule e mostre a duração do jogo (horas e minutos), 
+sabendo que o tempo máximo de duração do jogo é de 24 horas e que ele pode começar em um dia e 
+terminar no dia seguinte. 
+<hr><br>
+<script>
+    var horas1 = Number(prompt("Digite a hora do começo do jogo. Entre 0 ~ 23")); 
+    var min1 = Number(prompt("Digite o minuto do começo do jogo. Entre 0 ~ 59")); 
+    var horas2 = Number(prompt("Digite a hora do final do jogo. Entre 0 ~ 23")); 
+    var min2 = Number(prompt("Digite o minuto do final do jogo. Entre 0 ~ 59")); 
+    var horaf, minf, dias = 0;
+
+    if (min1 < 0 || min1 > 59 || min2 < 0 || min2 > 59) {
+        document.write("Coloque um minuto apropriado");
+    } else if (horas1 < 0 || horas1 > 23 || horas2 < 0 || horas2 > 23) {
+        document.write("Coloque uma hora apropriada");
+    } else {
+        // Calcula os minutos
+        minf = min2 - min1;
+        if (minf < 0) {
+            minf += 60;
+            horas2 -= 1;
+        }
+
+        // Ajusta as horas
+        horaf = horas2 - horas1;
+        if (horaf < 0) {
+            horaf += 24;
+            dias += 1;
+        }
+
+        // Agora calculamos quantos dias inteiros o evento durou (se necessário)
+        if (horaf >= 24) {
+            dias += Math.floor(horaf / 24);
+            horaf = horaf % 24; // Deixa a hora dentro de 0-23
+        }
+
+        document.write("O tempo de evento dura " + dias + " dias, " + horaf + " horas e " + minf + " minutos.");
+    }
+</script>

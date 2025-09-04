@@ -1,0 +1,29 @@
+Escreva um algoritmo que leia um vetor de 10 posições e mostre-o ordenado em
+ordem crescente.
+<hr><br>
+<script>
+    //criar três vetores
+    vetor10 = []
+    vetorOrdenado = []
+
+    //adicionar o número no vetorA e no vetorB via ParseInt Math.Random
+    for (var contador1 = 0; contador1 < 10; contador1++) {
+        vetor10[contador1] = parseInt(Math.random()*50)+1
+    }
+
+    document.write("Vetor desordenado: " + vetor10 + "<br><br>")
+
+
+        //metodo bolha.
+    var aux     //fazer uma variavel auxiliar
+    for (var x = 0; x < 10; x++) { //fazer um contador sobre os números em ordem
+        for (var contador = 0; contador < 10; contador++) { //fazer o mesmo contador que foi feito no começo
+            if (vetor10[contador] > vetor10[contador+1]) { // se o número de 
+                aux = vetor10[contador+1]    //fazer com que a auxiliar pegue o número da direita
+                vetor10[contador+1] = vetor10[contador]     //fazer com que o número da esquerda seja o número da direita
+                vetor10[contador] = aux     //fazer com que o número da esquerda seja o número auxiliar
+            }
+        }
+    }
+    document.write("Vetor ordenado: " + vetor10 + "<br><br>")
+</script>

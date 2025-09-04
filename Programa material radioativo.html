@@ -1,0 +1,31 @@
+Um material radioativo perde 15% da sua massa a cada 200 segundos, quando exposto
+a condições ambientais normais. Faça um programa que solicite a massa original do material
+radioativo que ficou exposto, e calcule e informe quanto tempolevou para que a massa
+ficasse reduzida a menos de 2 gramas
+<hr><br>
+<script>
+    var grama = Number(prompt("Quantas gramas tem o material radioativo")); //Maior população
+    var tempoS = 0
+    var tempoM = 0
+    var tempoH = 0
+
+    while (grama >= 2) {
+        grama = grama - ((grama*15)/100)
+        tempoS = tempoS + 200
+    }
+    if (tempoS == 0) {
+        document.write("dados errados. Aperte f5 para tentar novamente.") 
+    } else {
+        while (tempoS > 59) {
+            tempoS = tempoS - 60
+            tempoM++
+        }
+        while (tempoM > 59) {
+            tempoM = tempoM - 60
+            tempoH++
+        }
+
+        
+document.write("demorou " + tempoH + " hora(s), " + tempoM + " minuto(s) e " + tempoS + " segundo(s) para o material ficar com menos de 2 gramas.")
+    }
+</script>

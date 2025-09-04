@@ -1,0 +1,20 @@
+faça um triângulo usando asteriscos. usando o método bolha.
+
+<hr><br>
+
+<script>
+    var vetor = []
+    for(var i = 0; i < 15; i++) {
+        var numero = parseInt(Math.random()*51)
+        vetor[i] = numero
+    }
+
+    for(var c = 0; c < 15; c++) {
+        for(var i = 0; i < 15; i++) {
+            aux = vetor [i]
+            vetor[i] = vetor[15-1-i]
+            vetor[15-1-i] = aux
+        }
+    }
+    
+</script>

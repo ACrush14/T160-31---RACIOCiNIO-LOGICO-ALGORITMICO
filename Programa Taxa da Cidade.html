@@ -1,0 +1,29 @@
+Duas cidades, A e B, têm taxas de crescimento populacional diferentes. A cidade 
+A tem uma população maior que a cidade B, mas a cidade B cresce mais rapidamente.
+Faça um programa que leia a população atual da cidade A, a população atual da cidade B,
+a taxa de crescimento populacional da cidade A e a taxa de crescimento populacional da cidade B.
+O programa deve calcular e imprimir quantos anos levará para que a população da cidade B
+se torne maior que a população da cidade A.
+O programa deve imprimir também a população da cidade A e a população da cidade B após esse número de anos.
+<hr><br>
+<script>
+    var A = Number(prompt("Informe a população atual da cidade A:")); //Maior população
+    var B = Number(prompt("Informe a população atual da cidade B:")); //Menor população
+    var taxaA = Number(prompt("Informe a taxa de crescimento populacional da cidade A:")); //Taxa menor: 30
+    var taxaB = Number(prompt("Informe a taxa de crescimento populacional da cidade B:")); //Taxa maior
+    var anos = 0;
+    if (A < B || taxaA > taxaB) {
+        document.write("Dados errados. A precisa ser maior que B e a taxa de B precisa ser maior que a taxa de A. Aperte f5 e tente novamente.")
+    }
+    while (A > B) {
+        anos++;
+        A = A + ((A*taxaA)/100);
+        B = B + ((B*taxaB)/100);
+    }
+    
+    if (anos==0) {
+        document.write("Dados errados")
+    } else {
+    document.write("Em " + anos + " anos, a população B de " + B.toFixed(0) + " habitantes superou a população A de " + A.toFixed(0) +" habitantes.")
+    }    
+</script>

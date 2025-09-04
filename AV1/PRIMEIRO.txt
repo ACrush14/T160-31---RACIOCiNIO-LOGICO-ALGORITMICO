@@ -1,0 +1,21 @@
+<h2> Primeiro programa </h2>
+
+Apresenta como declarar variáveis e apresentação de dados e/ou texto
+<script>
+//Declaração de variáveis - criação da variável
+var A;
+var B, C, D;
+//var A = 30
+
+//Armazenamento de dados nas variáveis
+A = 30;
+B = "Raciocínio";
+C = "100";
+D = B;
+
+//Instruções de saída apresentando apenas dados
+alert(A);
+document.write(B);
+console.log(C);
+
+</script>

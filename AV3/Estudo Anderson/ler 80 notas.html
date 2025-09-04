@@ -1,0 +1,38 @@
+Escrever um programa que gere (leia) um vetor de 80 notas, usando valores inteiros entre 0 e 10. 
+O programa deve criar um histograma que apresente a quantidade de vezes que cada dado 
+distinto do vetor de notas aparece no conjunto de dados.
+
+<hr><br>
+
+<script>
+    var vetor = []
+    //em cada vez que roda, na posição (contaddor), vai adiciionar a nola aleatória (nota)
+    for (var contador = 0; contador < 80; contador++){
+        var nota = parseInt(Math.random()*11)
+        vetor[contador] = nota 
+        //vetor [0] = [5]
+        //vetor [1] = [7] (então vai estar com [5,7])...
+    }
+    document.write("Esse é o vetor das notas: " +vetor + "<br><br>")
+
+
+    //construir um histograma
+    var posicaoNota = [0,0,0,0,0,0,0,0,0,0,0]
+    var contNota, op = 0;
+    for (var contador = 0; contador < 80; contador++){
+        for (valorNota = 0; valorNota < 11; valorNota++) {
+            if(vetor[contador] == valorNota) {
+                posicaoNota[valorNota]++;
+                break
+            }
+            op++
+        }
+    }
+    document.write("Vetor histograma: " + posicaoNota +"<br><br>")
+    for (x = 0; x < 11; x++){
+    document.write("Nota " + x + " - " + C[x] +" ocorrências.<br>");
+}
+document.write("Número de testes executados: " + op);
+
+</script>
+

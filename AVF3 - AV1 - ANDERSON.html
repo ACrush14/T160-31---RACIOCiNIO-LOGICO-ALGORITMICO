@@ -1,0 +1,29 @@
+O preço ao consumior de um carro é a soma do custo de fábrica com a porcentagem 
+do distribuidor e dos impostos, ambos aplicados ao custo de fábrica. As porcentagens
+encontram-se na tabela a seguinte. Faça um programa que receba o custo de fábrica de um carro e 
+apresente o preço ao consumidor final <br>
+até 12.000 reais - 5% ao distribuidor, 0% de imposto <br>
+Entre 12.000 e 25.000 reais - 10% ao distribuidor, 15% de imposto <br>
+Acima de 25.000 reais - 15% ao distribuidor, 20% de imposto<br>
+<hr>
+<br>
+
+<script>
+    var valor = Number(prompt("Digite o valor do carro"))
+    var dist, imp, valorF
+    if (valor <= 12000) {
+        dist = ((valor*5)/100)
+        valorF = dist + valor
+        document.write("Se o valor do carro é " + valor + " reais, o valor final é: " + valorF + " reais. O valor de distribuidor é " + dist + " reais.")
+    } else if (12000 < valor && valor < 25000) {
+        dist = Number((valor*10)/100)
+        imp = Number((valor*15)/100)
+        valorF = dist + valor + imp
+        document.write("Se o valor do carro é " + valor + " reais, o valor final é: " + valorF + " reais. O valor de imposto é " + imp + " reais e o de distribuidor é " + dist + " reais.")
+        } else if (valor > 25000) {
+            dist = Number((valor*15)/100)
+            imp = Number((valor*20)/100)
+            valorF = dist + valor + imp
+            document.write("Se o valor do carro é " + valor + " reais, o valor final é: " + valorF + " reais. O valor de imposto é " + imp + " reais e o de distribuidor é " + dist + " reais.")
+    }
+</script>

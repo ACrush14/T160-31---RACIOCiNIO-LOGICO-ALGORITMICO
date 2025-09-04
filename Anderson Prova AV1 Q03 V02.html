@@ -1,0 +1,50 @@
+Suponha que o valor a pagar em uma conta de energia mensal seja função da
+quantidade de KWh consumidos e que, <br> conforme mostra a tabela abaixo, a tarifa paga por KWh
+possui diferentes valores para cada classe consumidora. <br>
+Classe --------------------Tarifa por KWh<br>
+Consumidora-----------<br>
+<br>
+-----1---------------------------1 real <br>
+-----2--------------------------80 centavos<br>
+-----3--------------------------50 centavos<br>
+
+Sabendo que incide um imposto de 30% sobre o valor a pagar pela energia consumida, faça um
+programa que:<br>
+a) Solicite que o usuário digite seu consumo de energia em KWh e armazena-o em UMA variável
+adequada;<br>
+b) Solicite que o usuário digite a classe consumidora à qual pertence (1,2 ou 3) e armazena-a em
+UMA variável adequada;<br>
+c) Atribua o valor correto da tarifa de acordo com a tabela acima;<br>
+d) Calcule o valor total a pagar levando em conta o consumo total, o valor da tarifa e o acréscimo <br>
+de 30% sobre o valor a pagar pela energia consumida e imprima na tela corretamente o valor
+total a pagar.
+<hr><br>
+
+
+
+<script>
+    var enercon = Number(prompt("Por favor, diga quanto você tem de energia consumida em KWh."))
+    var classe = prompt("Usando apenas 1, 2 ou 3, qual classe consumidora você pertence?")
+    var cla1 = (enercon * 1)
+    var cla2 = (enercon * 0.8)
+    var cla3 = (enercon * 0.5)
+    var imp = (enercon * 0.3)
+
+
+    document.write(" Seu KWh é " + enercon + ".<br>")
+    document.write(" Sua classe é " + classe + ".<br>")
+    document.write(" O valor do imposto é " + imp.toFixed(2) + ".<br>")
+
+    if (classe == "1") {
+        valor = ((enercon * 1) + imp)
+        document.write("O valor a pagar pela energia é " + valor.toFixed(2) + ".")
+    } else if (classe == "2") {
+        valor = ((enercon * 0.8) + imp)
+        document.write("O valor a pagar pela energia é " + valor.toFixed(2) + ".")
+    } else if (classe == "3") {
+        valor = ((enercon * 0.5) + imp)
+        document.write("O valor a pagar pela energia é " + valor.toFixed(2) + ".")
+    } else {
+    document.write("Digite um número que correponde a classe acima para fazer o cálculo. Aperte f5 para tentar novamente.")
+}
+</script>

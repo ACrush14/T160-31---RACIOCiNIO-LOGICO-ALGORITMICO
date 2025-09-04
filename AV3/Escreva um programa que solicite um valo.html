@@ -1,0 +1,20 @@
+Escreva um programa que solicite um valor inteiro positivo, calcule e apresente
+a versão binária desse número. Use vetor!
+<br><hr>
+<script>
+var num = Number(prompt("Informe o valor a ser convertido:"));
+document.write("Valor informado: "+num+"<br><br>");
+//Declaração da variável vetor que vai armazenar os dígitos binários obtidos
+var B = [];//Vetor de tamanho desconhecido
+var pos = 0;//variável que controla as posições dentro do vetor
+while (num > 0){
+	var resto = num % 2;
+	B[pos] = resto;
+	pos++;
+	num = Math.trunc(num/2);
+}
+pos--;//para acessar a última posição preenchida do vetor
+document.write("Número binário obtido: ");
+for (pos; pos >= 0; pos--){
+	document.write(B[pos]);
+}

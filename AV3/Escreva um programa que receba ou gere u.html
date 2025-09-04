@@ -1,0 +1,25 @@
+
+Escreva um programa que receba ou gere um vetor desordenado, aplique o método bolha
+e ordene o vetor, apresentando-o em seguida.
+<br><hr>
+<script>
+var A = [];
+var p;
+for (p = 0; p < 10; p++){
+	A[p] = Number(prompt("Informe o valor da posição " + p));
+	//A[p] =  parseInt(Math.random()*30);
+}
+document.write("Vetor gerado: " + A + "<br><br>");
+//Método Bolha - Bubble sort
+var x, aux;
+for (x = A.length - 1; x > 0; x--){
+	for (p = 0; p < x; p++){
+		if (A[p] > A[p+1]){
+			aux = A[p];
+			A[p] = A[p+1];
+			A[p+1] = aux;
+		}
+	}
+}
+document.write("Vetor ordenado: " + A)
+</script>

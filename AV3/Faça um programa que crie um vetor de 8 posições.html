@@ -1,0 +1,17 @@
+Faça um programa que crie um vetor de 8 posições, armazene informações em 
+cada posição do vetor, e apresente o vetor preenchido.
+<br><hr>
+<script>
+var V = new Array (8);//declaração do vetor com 8 posições
+var x; //variável de controle das posições internas do vetor
+//Alimentar cada posição do vetor
+for (x = 0; x < 8; x++){
+	V[x] = prompt("Informe o dado da posição " + x + " do vetor V");
+}
+//Apresentação do vetor completo de uma única vez
+document.write("Vetor informado: " + V+"<br><br>");
+//Apresentação do vetor, posição por posição
+for (x = 0; x < 8; x++){
+	document.write("V["+x+"] = " + V[x] + "<br>")
+}
+</script>

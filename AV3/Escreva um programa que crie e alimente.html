@@ -1,0 +1,29 @@
+Escreva um programa que crie e alimente um vetor de 8 posições. O programa deve
+apresentar o vetor informado e calcular e apresentar a soma de todos os elementos
+do vetor, a soma dos elementos pares e a soma dos elementos das posições ímpares.
+<br><hr>
+<script>
+//Declaração do vetor de 8 posições
+var X = new Array(8);
+var p;
+//Alimentação do vetor de 8 posições
+for (p = 0; p < 8; p++){
+	X[p] = Number(prompt("Informe o elemento da posição " + p));
+}
+//Apresentação do vetor
+document.write("Vetor lido: " + X + "<br>");
+//Somatórios
+var soma = 0, spares = 0, simp = 0;
+for (p = 0; p < 8; p++){
+	soma = soma + X[p];
+	if (X[p]  % 2 == 0){//teste se o elemento X[p] é par
+		spares = spares + X[p];
+	}
+	if (p % 2 == 1){//teste para saber se a posição identificada por p é ímpar
+		simp = simp + X[p];
+	}
+}
+document.write("Soma de todos os elementos do vetor: " + soma + "<br>");
+document.write("Soma dos elementos pares do vetor: " + spares + "<br>");
+document.write("Soma dos elementos das posições ímpares: " + simp);
+</script>

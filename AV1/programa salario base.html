@@ -1,0 +1,23 @@
+Faça um programa que receba o salário base de um funcionário, calcule e mostre o salário a receber,
+sabendo-se que o funcioário tem gratificação de 5% sobre o salário base e e paga imposto de 7%
+também sobre o salário base. Faça o upload do programa com extensão HTML.
+<br><hr>
+
+<script>
+//Declaração de variaveis
+var salario, grat, imp, novosalario;
+
+//Solicitação de dados
+salario = prompt("Informe o salário base:");
+salario = Number(salario)
+
+//Processamento de dados
+grat = (salario * 0.05)
+imp = (salario * 0.07)
+novosalario = (salario + grat - imp)
+
+//Apresentação dos resultados
+document.write("Seu novo salário é: R$" + novosalario.toFixed(2) + ".<br>");
+document.write("Sua gratificação é de: R$" + grat.toFixed(2) + ".<br>");
+document.write("Seu imposto é de: R$" + imp.toFixed(2) + ".<br>");
+</script>

@@ -1,0 +1,23 @@
+Escreva um programa que crie e alimente um vetor de tamanho informado pelo usuário.
+Apresente o vetor lido. Em seguida, troque o conteúdo da primeira posição com a 
+última posição, o conteúdo da segunda posição com a penúltima, o conteúdo da terceira
+posição com a antepenúltima, e assim sucessivamente até inverter os conteúdos
+de todas as posições do vetor. Em seguida, o programa deve apresentar o vetor alterado.
+<br><hr>
+<script>
+var tam = prompt("Informe o tamanho do vetor:");
+var B = new Array(tam);
+var p;
+for (p = 0; p < tam; p++){
+	B[p] = Number(prompt("Informe o valor da posição " + p));
+}
+document.write("Vetor lido: " + B + "<br>");
+var aux, f = tam - 1;
+//Processo de troca dos conteúdos
+for (p = 0; p < Math.floor(tam/2); p++){
+	aux = B[p];
+	B[p] = B[f - p];
+	B[f - p] = aux;
+}
+document.write("Vetor invertido: " + B);
+</script>
